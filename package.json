@@ -1,0 +1,21 @@
+{
+  "name": "wild-horizons",
+  "version": "1.0.0",
+  "description": "a dataset of the planet’s most interesting places",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sujeet17m/NODE.JS.git"
+  },
+  "author": "Sujeet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sujeet17m/NODE.JS/issues"
+  },
+  "homepage": "https://github.com/Sujeet17m/NODE.JS#readme"
+}
