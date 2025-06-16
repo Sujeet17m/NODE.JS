@@ -1,15 +1,17 @@
-import http from 'node:http'//node: bcoz browser can confuse http between js & node
+import http from 'node:http'
+import { getDataFromDB } from './database/db'
 
-const PORT = 8000;
+const PORT = 8000
 
-const server = http.createServer((req,res) => {
-    console.log(req.url);
+ const server = http.createServer((req, res) => {
+    const destination = getDataFromDB()
 
-    if (req.url === '/api'){
-        res.end('This is from the server')
-    } else {
-        res.end('Not Found')
+    if (req.url === '/api' && req.method === 'GET'){
+        res.setHeader('Content-Type','aplication/json')
+        res.statusCode=200
+        res.end(JSON.stringify(destination))
     }
-})
+ })
 
-server.listen(PORT , () => console.log(`connected on port : ${PORT}`))
+ server.listen(PORT , () => console.log(`connected on port : ${PORT}`)
+ )
